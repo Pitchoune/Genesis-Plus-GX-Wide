@@ -24760,6 +24760,10 @@ struct retro_core_options_v2 options_fi = {
 #define OPTION_VAL_TOP_BOTTOM_FR "Haut/bas"
 #define OPTION_VAL_LEFT_RIGHT_FR "Gauche/droite"
 #define OPTION_VAL_FULL_FR "Complète"
+#define GENESIS_PLUS_GX_H40_EXTRA_COLUMNS_LABEL_FR "Colonnes supplémentaires à dessiner en H40 pour les écrans larges"
+#define GENESIS_PLUS_GX_H40_EXTRA_COLUMNS_INFO_0_FR "Définir le nombre de colonnes supplémentaires à dessiner pour les écrans larges"
+#define GENESIS_PLUS_GX_VDP_FIX_DMA_BOUNDARY_BUG_LABEL_FR "Correction d'un bug de limite de DMA VDP"
+#define GENESIS_PLUS_GX_VDP_FIX_DMA_BOUNDARY_BUG_INFO_0_FR "Activer cette option pour corriger le bug de limite DMA de VDP"
 #define GENESIS_PLUS_GX_LEFT_BORDER_LABEL_FR "Masquer les bordures latérales de la Master System"
 #define GENESIS_PLUS_GX_LEFT_BORDER_INFO_0_FR "Coupe 8 pixels soit du côté gauche de l'écran, soit des côtés gauche et droit lors du lancement de jeux Master System."
 #define OPTION_VAL_LEFT_BORDER_FR "Bordure de gauche uniquement"
@@ -25093,6 +25097,45 @@ struct retro_core_option_v2_definition option_defs_fr[] = {
          { "top/bottom", OPTION_VAL_TOP_BOTTOM_FR },
          { "left/right", OPTION_VAL_LEFT_RIGHT_FR },
          { "full",       OPTION_VAL_FULL_FR },
+         { NULL, NULL },
+      },
+      "disabled"
+   },
+   {
+      "genesis_plus_gx_h40_extra_columns",
+      GENESIS_PLUS_GX_H40_EXTRA_COLUMNS_LABEL_FR,
+      NULL,
+      GENESIS_PLUS_GX_H40_EXTRA_COLUMNS_INFO_0_FR,
+      NULL,
+      "video",
+      {
+         { "10", NULL },
+         { "0", NULL },
+         { "2", NULL },
+         { "4", NULL },
+         { "6", NULL },
+         { "8", NULL },
+         { "12", NULL },
+         { "14", NULL },
+         { "16", NULL },
+         { "18", NULL },
+         { "20", NULL },
+         { "22", NULL },
+         { "24", NULL },
+         { NULL, NULL },
+      },
+      "10"
+   },
+   {
+      "genesis_plus_gx_vdp_fix_dma_boundary_bug",
+      GENESIS_PLUS_GX_VDP_FIX_DMA_BOUNDARY_BUG_LABEL_FR,
+      NULL,
+      GENESIS_PLUS_GX_VDP_FIX_DMA_BOUNDARY_BUG_INFO_0_FR,
+      NULL,
+      "video",
+      {
+         { "disabled", NULL },
+         { "enabled",  NULL },
          { NULL, NULL },
       },
       "disabled"
